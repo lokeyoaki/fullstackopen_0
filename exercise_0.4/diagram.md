@@ -3,8 +3,19 @@
         participant browser
         participant server
 
-        browser->>server: GET https:studies.helsinki.fi/exampleapp/notes
+        browser->>server: GET https://studies.helsinki.fi/exampleapp/notes
         activate server
         server->>browser: HTML Document
         deactivate server
+
+        browser->>server: GET https://studies.helsinki.fi/exampleapp/main.css
+        activate server
+        server->>browser: CSS Document
+        deactivate server
+
+        browser->>server: GET https://studies.helsinki.fi/exampleapp/main.js
+        activate server
+        server->>browser: JS Document
+        deactivate server
+        
 ```
