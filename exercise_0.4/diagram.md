@@ -18,14 +18,10 @@
         server->>browser: JS Document
         deactivate server
 
-        Note right of browser: Browser fetches JSON data as a result of JavaScript code requesting it.
-
         browser->>server: GET https://studies.helsinki.fi/exampleapp/data.json
         activate server
         server->>browser: JSON Data
         deactive server
-
-        Note right of browser: Browser renders the Json with a callback.
 
         browser->>server: POST https://studies.helsinki.fi/exampleapp/new_note
         activate server
