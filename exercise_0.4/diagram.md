@@ -21,7 +21,7 @@
         browser->>server: GET https://studies.helsinki.fi/exampleapp/data.json
         activate server
         server->>browser: JSON Data
-        deactive server
+        deactivate server
 
         browser->>server: POST https://studies.helsinki.fi/exampleapp/new_note
         activate server
